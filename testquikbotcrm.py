@@ -252,7 +252,7 @@ async def check_request_updates():
             logger.debug("Request updates check completed")
         except Exception as e:
             logger.error(f"Error in check_request_updates: {e}")
-        await asyncio.sleep(1200)  # Проверка каждые 20 минут
+        await asyncio.sleep(60)  # Проверка каждые 20 минут
 
 # Создание клавиатуры главного меню
 def get_main_menu():
