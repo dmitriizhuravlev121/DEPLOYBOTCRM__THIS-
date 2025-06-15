@@ -1064,9 +1064,8 @@ async def main():
     asyncio.create_task(check_request_updates())
     await dp.start_polling(bot)
 
+def start_bot():
+    asyncio.run(main())
+
 if __name__ == '__main__':
-    try:
-        asyncio.run(main())
-    except Exception as e:
-        logger.critical(f"Критическая ошибка при запуске: {e}")
-        raise
+    start_bot()
